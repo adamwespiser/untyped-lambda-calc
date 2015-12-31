@@ -11,7 +11,12 @@ data Term =
   | TmApp Info Term Term
   deriving (Show)
 
-data Info = Info { row :: Int, col :: Int } deriving (Show)
+data Info = Info { row :: Int, col :: Int }
+showInfo :: Info -> String
+showInfo x = ""
+instance Show (Info) where 
+  show (Info x y) =  ""
+
 
 type BoundContext = [String]
 type LCParser = Parsec String BoundContext Term
